@@ -7,7 +7,7 @@ import AppBar from "@mui/material/AppBar";
 export const MyStyledAppBar = styled(AppBar)(({ theme }) => ({
     position: "fixed",
     zIndex: theme.zIndex.tooltip,
-    backgroundColor: '#818181',
+    backgroundColor: '#ffffff',
 }));
 
 export const MyStyledButton = styled(Button)(({ theme }) => ({
@@ -31,9 +31,15 @@ export const MyStyledButton = styled(Button)(({ theme }) => ({
 
 export const StylesToolbar = styled(Toolbar)(({ theme }) => ({
     display: "flex",
-    flexDirection: "column-reverse",
-    gap: "10px",
-    padding: "10px",
+    alignItems: "center",
+    // flexDirection: "column-reverse",
+    // gap: "10px",
+    // justifyContent:'space-between',
+    marginLeft: 'auto',
+    padding: "20px",
+    [theme.breakpoints.up("xs")]: {
+        minHeight: '20px',
+    }
 }));
 
 // export const useStylesButtonWrapper = makeStyles((theme) => ({
