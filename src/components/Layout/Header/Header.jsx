@@ -48,27 +48,6 @@ export const Header = () => {
     
       
 <Navigation/>
-          
-
-          {/* <StylesButtonWrapper>
-            <MyStyledButton variant="contained" >
-              <Add style={{ color: "#606060" }} />
-            </MyStyledButton>
-            <MyStyledButton
-              variant="contained"
-            //   disabled={selectedItem === null}
-            >
-              <DeleteOutline
-                style={{ color: "#606060" }}
-              />
-            </MyStyledButton>
-            <MyStyledButton
-              variant="contained"
-            //   disabled={selectedItem === null}
-            >
-              <DriveFileRenameOutlineIcon style={{ color: "#606060" }} />
-            </MyStyledButton>
-          </StylesButtonWrapper> */}
           {/* <Box sx={{ flexGrow: 1 }} /> */}
           {/* <SearchBox /> */}
         {/* </StylesToolbar> */}

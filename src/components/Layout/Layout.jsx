@@ -8,7 +8,7 @@ export const Layout = () => {
   return (
     <>
       <Header />
-      <main>
+      <main style={{marginTop: "13%"}}>
         {/* <Suspense fallback={<Loader />}> */}
           <Outlet />
         {/* </Suspense> */}

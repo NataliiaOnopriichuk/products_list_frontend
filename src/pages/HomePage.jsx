@@ -1,9 +1,10 @@
+import { ProductsList } from 'components/ProductsList/ProductsList'
 import React from 'react'
 // import PropTypes from 'prop-types'
 
-export const HomePage = props => {
+export const HomePage = () => {
   return (
-    <div>HomePage</div>
+    <ProductsList/>
   )
 }
 
