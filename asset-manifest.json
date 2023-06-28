@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/products_list_frontend/static/css/main.38184ee2.css",
-    "main.js": "/products_list_frontend/static/js/main.25b6ce0e.js",
-    "static/media/tomatoes.webp": "/products_list_frontend/static/media/tomatoes.b43858314432916dd357.webp",
+    "main.css": "/products_list_frontend/static/css/main.7d40bf6a.css",
+    "main.js": "/products_list_frontend/static/js/main.37d49d76.js",
     "static/media/logo.png": "/products_list_frontend/static/media/logo.cae4a3be42a7478f42b8.png",
+    "static/media/basket.png": "/products_list_frontend/static/media/basket.4245443341cade366ce8.png",
     "index.html": "/products_list_frontend/index.html",
-    "main.38184ee2.css.map": "/products_list_frontend/static/css/main.38184ee2.css.map",
-    "main.25b6ce0e.js.map": "/products_list_frontend/static/js/main.25b6ce0e.js.map"
+    "main.7d40bf6a.css.map": "/products_list_frontend/static/css/main.7d40bf6a.css.map",
+    "main.37d49d76.js.map": "/products_list_frontend/static/js/main.37d49d76.js.map"
   },
   "entrypoints": [
-    "static/css/main.38184ee2.css",
-    "static/js/main.25b6ce0e.js"
+    "static/css/main.7d40bf6a.css",
+    "static/js/main.37d49d76.js"
   ]
 }
