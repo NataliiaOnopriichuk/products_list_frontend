@@ -31,11 +31,10 @@ export const AuthForm = ({type}) => {
           <Icon>
             <LockOutlinedIcon />
           </Icon>
-          {type === 'registrationPage' && <Title>Sign up</Title>}
-          {type !== 'registrationPage' && <Title>Sign in</Title>}
+          <Title>{type === 'registrationPage' ? 'Sign up' : 'Sign in'}</Title>
           <Box component="form" noValidate onSubmit={handleSubmit} sx={{ mt: 3 }}>
             <Grid container spacing={2}>
-              <Grid item xs={12}>
+             {type === 'registrationPage' && <Grid item xs={12}>
                 <TextField
                   required
                   fullWidth
@@ -44,7 +43,7 @@ export const AuthForm = ({type}) => {
                   name="name"
                   autoComplete="given-name"
                 />
-              </Grid>
+              </Grid>}
               <Grid item xs={12}>
                 <TextField
                   required
@@ -74,13 +73,15 @@ export const AuthForm = ({type}) => {
               variant="contained"
               sx={{ mt: 3, mb: 2 }}
             >
-              Sign Up
+              {type === 'registrationPage' ? 'Sign Up' : 'Sign in'}
             </Button>
             <Grid container justifyContent="flex-end">
               <Grid item>
-                <Link href="#" variant="body2">
+                {type === 'registrationPage' ? <Link href="#" variant="body2">
                   Already have an account? Sign in
-                </Link>
+                </Link> : <Link href="#" variant="body2">
+                 Don't have an account? Sign Up
+                </Link>}
               </Grid>
             </Grid>
           </Box>
