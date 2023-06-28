@@ -1,31 +1,34 @@
 import { styled } from "@mui/material/styles";
 import Toolbar from "@mui/material/Toolbar";
 import AppBar from "@mui/material/AppBar";
+import { Container, Typography } from "@mui/material";
 
 export const MyStyledAppBar = styled(AppBar)(({ theme }) => ({
     position: "fixed",
     zIndex: theme.zIndex.tooltip,
-    backgroundColor: '#ffffff',
+    backgroundColor: theme.palette.primary.light,
 }));
 
+export const StyleContainer = styled(Container)(({ theme }) => ({
+    display:"flex", 
+    alignItems: 'center'
+}));
 
-
-
-// export const useStylesToolbar = makeStyles((theme) => ({
-//     container: {
-//         display: "flex",
-//         flexDirection: "column-reverse",
-//         gap: "10px",
-//         padding: "10px",
-//     },
-// }));
+export const StyleTypography = styled(Typography)(({ theme }) => ({
+    mr: 2,
+   fontFamily: 'Belanosima',
+    fontWeight: 400,
+    letterSpacing: '.15rem',
+    color: theme.palette.info.main,
+    textDecoration: 'none',
+    fontSize: '26px',
+    lineHeight: 'unset',
+    margin:"0"
+}));
 
 export const StylesToolbar = styled(Toolbar)(({ theme }) => ({
     display: "flex",
     alignItems: "center",
-    // flexDirection: "column-reverse",
-    // gap: "10px",
-    // justifyContent:'space-between',
     marginLeft: 'auto',
     padding: "20px",
     [theme.breakpoints.up("xs")]: {
@@ -33,16 +36,11 @@ export const StylesToolbar = styled(Toolbar)(({ theme }) => ({
     }
 }));
 
-// export const useStylesButtonWrapper = makeStyles((theme) => ({
-//     container: {
-//         display: "flex",
-//         gap: "45px",
-
-//         [theme.breakpoints.up("sm")]: {
-//             gap: "20px",
-//         },
-//     },
-// }));
+export const Image = styled('img')`
+height: 30px; 
+width: 38px;
+padding: 20px 20px 20px 0;
+`;
 
 
 

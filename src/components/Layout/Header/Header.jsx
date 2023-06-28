@@ -1,18 +1,15 @@
 import * as React from "react";
-// import { Add, DeleteOutline } from "@mui/icons-material";
-// import DriveFileRenameOutlineIcon from "@mui/icons-material/DriveFileRenameOutline";
 import Box from "@mui/material/Box";
 import logo from '../../../assets/image/logo.png'
 // import { useMedia } from "react-use";
 import {
+    Image,
   MyStyledAppBar,
-//   MyStyledButton,
-//   StylesButtonWrapper,
-//   StylesToolbar,
+  StyleContainer,
+  StyleTypography,
 } from "./style";
-import { Container, Typography } from "@mui/material";
-import { Navigation } from "./Navigation/Navigation";
-// import { SearchBox } from "../../SearchBox/SearchBox";
+import { Navigation } from "../Navigation/Navigation";
+
 
 export const Header = () => {
 //   const isMobile = useMedia("(max-width: 599px)");
@@ -20,39 +17,20 @@ export const Header = () => {
   return (
 
       <MyStyledAppBar>
-        <Container style={{display:"flex", alignItems: 'center'}}>
-        {/* <div style={{display:"flex", alignItems: 'center'}}> */}
+        <StyleContainer>
       <Box>
-            <img src={logo} alt="logo" style={{height: '30px', width:"38px", padding: "20px 20px 20px 0"}}/>
+            <Image src={logo} alt="logo"/>
             </Box>
-            <Typography
+            <StyleTypography
             variant="h6"
             noWrap
             component="a"
             href="/"
-            sx={{
-              mr: 2,
-              fontFamily: 'Belanosima',
-              fontWeight: 400,
-              letterSpacing: '.15rem',
-              color: 'black',
-              textDecoration: 'none',
-              fontSize: '26px',
-              lineHeight: 'unset',
-              margin:"0"
-            }}
-          >
+           >
             PRODUCTS LIST
-          </Typography>
-        {/* <StylesToolbar> */}
-    
-      
-<Navigation/>
-          {/* <Box sx={{ flexGrow: 1 }} /> */}
-          {/* <SearchBox /> */}
-        {/* </StylesToolbar> */}
-        {/* </div> */}
-        </Container>
+          </StyleTypography>
+        <Navigation/>
+        </StyleContainer>
       </MyStyledAppBar>
 
   );

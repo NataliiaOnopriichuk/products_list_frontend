@@ -1,12 +1,10 @@
-import { ProductsList } from 'components/ProductsList/ProductsList'
+import { Home } from 'components/Home/Home'
 import React from 'react'
-// import PropTypes from 'prop-types'
 
-export const HomePage = () => {
-  return (
-    <ProductsList/>
+export const HomePage = () => (
+    <Home/>
   )
-}
 
-// HomePage.propTypes = {}
+
+
 
