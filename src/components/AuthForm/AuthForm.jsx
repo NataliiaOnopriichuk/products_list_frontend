@@ -7,7 +7,8 @@ import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
 import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Container from '@mui/material/Container';
-import { Icon, StylesBox, Title } from './style';
+import { Body, Icon, StylesBox, Title } from './style';
+
 
 
 export const AuthForm = ({type}) => {
@@ -25,7 +26,8 @@ export const AuthForm = ({type}) => {
       };
 
   return (
-      <Container component="main" maxWidth="xs">
+    <Body>
+      <Container component="main" maxWidth="xs" style={{padding: '55px'}}>
         {/* <CssBaseline /> */}
         <StylesBox>
           <Icon>
@@ -87,5 +89,6 @@ export const AuthForm = ({type}) => {
           </Box>
         </StylesBox>
       </Container>
+      </Body>
   )
 }
