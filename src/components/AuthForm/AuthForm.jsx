@@ -1,13 +1,10 @@
 import * as React from 'react';
-import Button from '@mui/material/Button';
-// import CssBaseline from '@mui/material/CssBaseline';
-import TextField from '@mui/material/TextField';
-import Link from '@mui/material/Link';
 import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
 import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Container from '@mui/material/Container';
-import { Body, Icon, StylesBox, Title } from './style';
+import { Body, Icon, Input, StylesBox, StylesButton, StylesGrid, StylesLink, Title } from './style';
+import { routes } from 'utils/routes';
 
 
 
@@ -28,16 +25,15 @@ export const AuthForm = ({type}) => {
   return (
     <Body>
       <Container component="main" maxWidth="xs" style={{padding: '55px'}}>
-        {/* <CssBaseline /> */}
-        <StylesBox>
+        <StylesBox style={{background:"white"}}>
           <Icon>
             <LockOutlinedIcon />
           </Icon>
           <Title>{type === 'registrationPage' ? 'Sign up' : 'Sign in'}</Title>
           <Box component="form" noValidate onSubmit={handleSubmit} sx={{ mt: 3 }}>
             <Grid container spacing={2}>
-             {type === 'registrationPage' && <Grid item xs={12}>
-                <TextField
+             {type === 'registrationPage' && <StylesGrid item xs={12}>
+                <Input
                   required
                   fullWidth
                   id="name"
@@ -45,9 +41,9 @@ export const AuthForm = ({type}) => {
                   name="name"
                   autoComplete="given-name"
                 />
-              </Grid>}
-              <Grid item xs={12}>
-                <TextField
+              </StylesGrid>}
+              <StylesGrid item xs={12}>
+                <Input
                   required
                   fullWidth
                   id="email"
@@ -55,9 +51,9 @@ export const AuthForm = ({type}) => {
                   name="email"
                   autoComplete="email"
                 />
-              </Grid>
-              <Grid item xs={12}>
-                <TextField
+              </StylesGrid>
+              <StylesGrid item xs={12}>
+                <Input
                   required
                   fullWidth
                   name="password"
@@ -66,24 +62,24 @@ export const AuthForm = ({type}) => {
                   id="password"
                   autoComplete="new-password"
                 />
-              </Grid>
+              </StylesGrid>
            
             </Grid>
-            <Button
+            <StylesButton
               type="submit"
               fullWidth
               variant="contained"
               sx={{ mt: 3, mb: 2 }}
             >
               {type === 'registrationPage' ? 'Sign Up' : 'Sign in'}
-            </Button>
-            <Grid container justifyContent="flex-end">
+            </StylesButton>
+            <Grid container justifyContent="center">
               <Grid item>
-                {type === 'registrationPage' ? <Link href="#" variant="body2">
+                {type === 'registrationPage' ? <StylesLink to={routes.LOGIN}>
                   Already have an account? Sign in
-                </Link> : <Link href="#" variant="body2">
+                </StylesLink> : <StylesLink to={routes.REGISTER}>
                  Don't have an account? Sign Up
-                </Link>}
+                </StylesLink>}
               </Grid>
             </Grid>
           </Box>

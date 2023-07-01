@@ -1,10 +1,45 @@
 import { styled } from "@mui/material/styles";
-import { Avatar, Box} from "@mui/material";
+import { Avatar, Box, Button, Grid, TextField} from "@mui/material";
 import grocery from '../../assets/image/grocery.png'
+import { Link } from "react-router-dom";
 
 export const Icon = styled(Avatar)(({ theme }) => ({
     m: 1, 
     background: theme.palette.error.main,
+}));
+
+export const StylesGrid = styled(Grid)(({ theme }) => ({
+    '& div label': {
+        fontFamily: "Inter",
+    },
+    '& div label.Mui-focused': {
+        color: theme.palette.info.main,
+    },
+}));
+
+
+export const Input = styled(TextField)(({ theme }) => ({
+    fontFamily: "Inter",
+    '& input': {
+        fontFamily: "Inter",
+    },
+
+}));
+
+export const StylesButton = styled(Button)(({ theme }) => ({
+    fontFamily: "Inter",
+    fontWeight: '600',
+
+    '&:hover':{
+        color: theme.palette.common.white
+    }
+}));
+
+export const StylesLink = styled(Link)(({ theme }) => ({
+    fontFamily: "Inter",
+    fontSize: '14px',
+    textAlign: 'center',
+    color: '#373737ad'
 }));
 
 
@@ -30,12 +65,12 @@ font-size: 22px;
 text-transform: uppercase;
 `;
 
-export const Body = styled('body')`
+export const Body = styled('div')`
 background-image: URL(${grocery});
 background-size: contain;
 background-repeat: no-repeat;
 background-position: center;
-margin: 27px;
-padding: 81px;
+margin: 5%;
+padding: 5%;
 `;
 

@@ -1,8 +1,8 @@
-import { Button } from "@mui/material";
 import { styled } from "@mui/material/styles";
+import { Link } from "react-router-dom";
 
 
-export const SignUpButton = styled(Button)(({ theme }) => ({
+export const SignUpButton = styled(Link)(({ theme }) => ({
     mr: 2,
       fontFamily: 'Inter',
       fontWeight: 600,
@@ -10,9 +10,10 @@ export const SignUpButton = styled(Button)(({ theme }) => ({
       color: theme.palette.info.main,
       textDecoration: 'none',
       fontSize: '16px',
+      textTransform: 'uppercase',
 }));
 
-export const LoginButton = styled(Button)(({ theme }) => ({
+export const LoginButton = styled(Link)(({ theme }) => ({
     mr: 2,
     fontFamily: 'Inter',
     fontWeight: 600,
@@ -20,4 +21,5 @@ export const LoginButton = styled(Button)(({ theme }) => ({
     color: theme.palette.info.main,
     textDecoration: 'none',
     fontSize: '16px',
+    textTransform: 'uppercase',
 }));

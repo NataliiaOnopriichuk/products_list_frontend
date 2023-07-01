@@ -5,7 +5,7 @@ import { Container, Typography } from "@mui/material";
 
 export const MyStyledAppBar = styled(AppBar)(({ theme }) => ({
     position: "fixed",
-    zIndex: theme.zIndex.tooltip,
+    zIndex: "100",
     backgroundColor: theme.palette.primary.light,
 }));
 
