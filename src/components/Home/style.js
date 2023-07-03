@@ -50,23 +50,39 @@ animation: ${bounceAnimation} 1s infinite;
 }
 `;
 
-export const Title = styled('p')`
-font-family: 'Belanosima';
-font-size: 35px;
-text-transform: uppercase;
-text-align: center;
-margin: auto;
-color: ${({theme}) => theme.palette.info.dark};
-`;
+export const Title = styled('p')(({ theme }) => ({
+  fontFamily: 'Belanosima',
+fontSize: '30px',
+textTransform: 'uppercase',
+textAlign: 'center',
+margin: 'auto',
+color: theme.palette.info.dark,
 
-export const Inner = styled('div')`
-position:relative;
-height: 500px;
-    width: 500px;
-    cursor:pointer;
-background: ${({theme}) => theme.palette.primary.light};
-    border-radius: 50%;
-    margin: 19px auto;
-    animation: ${fadeInAnimation} 2s ease-in;
-    box-shadow: 0px 2px 4px -1px rgba(0,0,0,0.2), 0px 4px 5px 0px rgba(0,0,0,0.14), 0px 1px 10px 0px rgba(0,0,0,0.12);
-`;
+
+    [theme.breakpoints.up("sm")]: {
+      fontSize: '35px',
+  },
+}));
+  
+export const Inner = styled('div')(({ theme }) => ({
+  position: 'relative',
+  height: '300px',
+  width: '300px',
+  cursor: 'pointer',
+  background: theme.palette.primary.light,
+  borderRadius: '50%',
+  margin: '19px auto',
+  animation: `${fadeInAnimation} 2s ease-in`,
+  boxShadow: '0px 2px 4px -1px rgba(0,0,0,0.2), 0px 4px 5px 0px rgba(0,0,0,0.14), 0px 1px 10px 0px rgba(0,0,0,0.12)',
+
+    [theme.breakpoints.up("sm")]: {
+      height: '400px',
+      width: '400px',
+  },
+
+  [theme.breakpoints.up("md")]: {
+    height: '500px',
+    width: '500px',
+}
+}));
+  

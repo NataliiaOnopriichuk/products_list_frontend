@@ -1,7 +1,7 @@
 import * as React from "react";
 import Box from "@mui/material/Box";
 import logo from '../../../assets/image/logo.png'
-// import { useMedia } from "react-use";
+import { useMedia } from "react-use";
 import {
     Image,
   MyStyledAppBar,
@@ -12,7 +12,7 @@ import { Navigation } from "../Navigation/Navigation";
 
 
 export const Header = () => {
-//   const isMobile = useMedia("(max-width: 599px)");
+  const isMobile = useMedia('(max-width: 767px)');
 
   return (
 
@@ -29,8 +29,9 @@ export const Header = () => {
            >
             PRODUCTS LIST
           </StyleTypography>
-        <Navigation/>
+        {!isMobile && <Navigation/>}
         </StyleContainer>
+        {isMobile && <Navigation/>}
       </MyStyledAppBar>
 
   );

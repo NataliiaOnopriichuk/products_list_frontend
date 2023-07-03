@@ -2,17 +2,18 @@
 // import React, { Suspense } from 'react';
 import { Outlet } from 'react-router-dom';
 import { Header } from './Header/Header';
+import { Main } from './style';
 
 
 export const Layout = () => {
   return (
     <>
       <Header />
-      <main style={{marginTop: "100px"}}>
+      <Main>
         {/* <Suspense fallback={<Loader />}> */}
           <Outlet />
         {/* </Suspense> */}
-      </main>
+      </Main>
     </>
   );
 };

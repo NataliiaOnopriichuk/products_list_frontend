@@ -11,7 +11,12 @@ export const MyStyledAppBar = styled(AppBar)(({ theme }) => ({
 
 export const StyleContainer = styled(Container)(({ theme }) => ({
     display:"flex", 
-    alignItems: 'center'
+    justifyContent: 'center',
+    alignItems: 'center',
+
+    [theme.breakpoints.up("md")]: {
+        justifyContent: 'flex-start',
+    },
 }));
 
 export const StyleTypography = styled(Typography)(({ theme }) => ({
