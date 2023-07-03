@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/products_list_frontend/static/css/main.b7d0ba3d.css",
-    "main.js": "/products_list_frontend/static/js/main.5b5c2d0f.js",
+    "main.js": "/products_list_frontend/static/js/main.b4853732.js",
     "static/media/grocery.png": "/products_list_frontend/static/media/grocery.2f9ecdae190c351d8a8d.png",
     "static/media/tomatoes.webp": "/products_list_frontend/static/media/tomatoes.b43858314432916dd357.webp",
     "static/media/logo.png": "/products_list_frontend/static/media/logo.cae4a3be42a7478f42b8.png",
     "static/media/basket.png": "/products_list_frontend/static/media/basket.4245443341cade366ce8.png",
     "index.html": "/products_list_frontend/index.html",
     "main.b7d0ba3d.css.map": "/products_list_frontend/static/css/main.b7d0ba3d.css.map",
-    "main.5b5c2d0f.js.map": "/products_list_frontend/static/js/main.5b5c2d0f.js.map"
+    "main.b4853732.js.map": "/products_list_frontend/static/js/main.b4853732.js.map"
   },
   "entrypoints": [
     "static/css/main.b7d0ba3d.css",
-    "static/js/main.5b5c2d0f.js"
+    "static/js/main.b4853732.js"
   ]
 }
