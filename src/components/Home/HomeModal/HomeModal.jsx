@@ -1,13 +1,16 @@
 import React, { useEffect } from 'react'
-import { Box } from '@mui/material'
 import { createPortal } from 'react-dom';
-import { Modal, Text, TextContent, style } from './style';
+import { Backdrop, Image, Modal, Text, TextContent } from './style';
 import PropTypes from 'prop-types'
 import { routes } from 'utils/routes';
+import { useMedia } from 'react-use';
+import logo from '../../../assets/image/logo.png'
+import { Box } from '@mui/material';
 
 const modalRoot = document.querySelector('#modal-root');
 
 export const HomeModal = ({closeModal}) => {
+  const isMobile = useMedia('(max-width: 479px)');
     
     useEffect(() => {
         const closeModalOnEscape = event => {
@@ -29,13 +32,14 @@ export const HomeModal = ({closeModal}) => {
       };
 
       return createPortal(
-        <Modal onClick={closeModalOnBackdropClick}>
-      <Box sx={{ ...style, width: 400 }}>
+        <Backdrop onClick={closeModalOnBackdropClick}>
+      <Modal>
+        {isMobile &&   <Box><Image src={logo} alt="logo"/></Box>}
         <TextContent>
         If you want to fill your basket, you need to
         </TextContent><Text to={routes.REGISTER}>register</Text>
-      </Box>
-    </Modal>,
+      </Modal>
+    </Backdrop>,
         modalRoot
       );
       }

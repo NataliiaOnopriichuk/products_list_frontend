@@ -9,6 +9,11 @@ export const MyStyledAppBar = styled(AppBar)(({ theme }) => ({
     backgroundColor: theme.palette.primary.light,
 }));
 
+export const Line = styled('div')(({ theme }) => ({
+    height: "5px",
+    backgroundColor: theme.palette.primary.dark,
+}));
+
 export const StyleContainer = styled(Container)(({ theme }) => ({
     display:"flex", 
     justifyContent: 'center',

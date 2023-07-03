@@ -4,6 +4,7 @@ import logo from '../../../assets/image/logo.png'
 import { useMedia } from "react-use";
 import {
     Image,
+  Line,
   MyStyledAppBar,
   StyleContainer,
   StyleTypography,
@@ -32,6 +33,7 @@ export const Header = () => {
         {!isMobile && <Navigation/>}
         </StyleContainer>
         {isMobile && <Navigation/>}
+        {!isMobile && <Line></Line>}
       </MyStyledAppBar>
 
   );
